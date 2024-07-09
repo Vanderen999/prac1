@@ -27,8 +27,9 @@ module.exports = {
   devServer: {
     static: "./dist",
     hot: true,
-    watchFiles: ["index.html"],
+    watchFiles: ["index.html", "src/scss/*"],
   },
+  // "src/scss/index.scss", "src/_utility.scss"
   module: {
     rules: [
       {

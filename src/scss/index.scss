@@ -1,0 +1,87 @@
+@use "utility.scss" as *;
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+    --font-weight: font-weight: 800;
+    --font-size: font-size :28;
+}
+@font-face {
+  font-family: "Manrope Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url(@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2)
+    format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+// --Dark-Blue
+body {
+    background-color: var(--Dark-Blue);
+}
+
+#root {
+    font-family: 'Manrope Variable', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+main {
+  width: toRem(540);
+  height:  toRem(332);
+}
+
+.div1 {
+  width: toRem(540);
+  height:  toRem(332);
+  border-radius:  toRem(16);
+  background-color: var(--Dark-Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  & h1 {
+    margin-top:  toRem(50);
+    font-size:  toRem(18);
+    color: var(--Neon-Green);
+    font-weight: 800;
+    letter-spacing:  toRem(3);
+    margin-bottom:  toRem(34);
+  }
+
+  & p {
+    text-align: center;
+    color: var(--Light-Cyan);
+    font-size:  toRem(26);
+    margin-bottom:  toRem(55);
+    font-weight: 800;
+    max-width:  toRem(414);
+  }
+
+  & button {
+    border: none;
+  text-decoration: none;
+  padding:  toRem(24);
+  border-radius:  toRem(36);
+  position: absolute;
+  bottom:  toRem(-38);
+  background-color: var(--Neon-Green);
+  }
+  
+  & button:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px  toRem(24)  toRem(11) rgba(82,255,168,1);
+-moz-box-shadow: 0px 0px  toRem(24)  toRem(11) rgba(82,255,168,1);
+box-shadow: 0px 0px  toRem(24)  toRem(11) rgba(82,255,168,1);
+  }
+}
+
